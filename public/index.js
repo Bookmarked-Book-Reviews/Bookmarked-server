@@ -3,4 +3,4 @@ import mongoose from 'mongoose';
 import bodyparser from 'body-parser';
 import cors from 'cors';
 
-const app = express;
+const app = express();
