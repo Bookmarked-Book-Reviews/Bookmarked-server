@@ -26,6 +26,14 @@ app.get('/signup',(req, res) => {
     res.send('signup');
 });
 
+app.get('/dashboard',(req, res) => {
+    res.send('dashboard');
+});
+
+app.get('/create',(req, res) => {
+    res.send('Add Book');
+});
+
 app.listen(3000, () => {
     console.log('server is running at port no 3000');
 })
