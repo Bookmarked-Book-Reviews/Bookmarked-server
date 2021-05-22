@@ -1,22 +1,22 @@
+const dotenv = require("dotenv");
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 
-const DB ='mongodb+srv://user_1905:bookmarked05@cluster0.ujle9.mongodb.net/bookstack?retryWrites=true&w=majority';
+dotenv.config({path:'./config.env'});
 
-mongoose.connect(DB, {
-    useNewUrlParser: true,
-    useCreateIndex:  true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
-}).then(() => {
-    console.log('connection successful');
-}).catch((err) => console.log('no connection'));
+require('./db/conn');
+// const User = require('./model/userSchema');
+
+app.use(express.json());
+
+// we link the router files to make our route easy
+app.use(require('./router/auth'));
 
 
-app.get('/',(req, res) => {
-    res.send('Hello world from the server');
-});
+// app.get('/',(req, res) => {
+//    res.send('Hello world from the server index.js');
+// });
 
 app.get('/login',(req, res) => {
     res.send('login ');
