@@ -12,6 +12,7 @@ app.use(express.json());
 
 // we link the router files to make our route easy
 app.use(require('./router/auth'));
+app.use(require('./router/book'));
 
 
  app.get('/',(req, res) => {
