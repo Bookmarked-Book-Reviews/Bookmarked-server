@@ -14,9 +14,9 @@ app.use(express.json());
 app.use(require('./router/auth'));
 
 
-// app.get('/',(req, res) => {
-//    res.send('Hello world from the server index.js');
-// });
+ app.get('/',(req, res) => {
+    res.send('Hello world from the server index.js');
+ });
 
 app.get('/login',(req, res) => {
     res.send('login ');
