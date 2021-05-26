@@ -10,10 +10,11 @@ require('./db/conn');
 
 app.use(express.json());
 
+const PORT = process.env.PORT || 5000;
+
 // we link the router files to make our route easy
 app.use(require('./router/auth'));
 app.use(require('./router/book'));
-
 
  app.get('/',(req, res) => {
     res.send('Hello world from the server index.js');
@@ -35,6 +36,6 @@ app.get('/create',(req, res) => {
     res.send('Add Book');
 });
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
     console.log('server is running at port no 5000');
 })
