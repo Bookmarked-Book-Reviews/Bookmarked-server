@@ -13,29 +13,29 @@ BHF/recG2KMH7gk4Clifo/2021
 
 
 ## Libraries used:
-Express
-Async
-MongoDB Node js 
-Body-Parser
-Cors
-Axios
-Dotenv
-React js
+* Express
+* Async
+* MongoDB Node js 
+* Body-Parser
+* Cors
+* Axios
+* Dotenv
+* React js
 
 ## Getting Started
 ### Prerequisites
 #### Node
- ##### Node installation on Windows
- Just go on [official Node.js website] (https://nodejs.org/) and download the installer.
- Also be sure to have 'git' available in your pat.
+ ##### * Node installation on Windows
+ * Just go on [official Node.js website] (https://nodejs.org/) and download the installer.
+ * Also be sure to have 'git' available in your path.
  
- ##### Node installation on Ubuntu
- You can install nodejs and npm easily with apt install, just run the following commands,
+ ##### * Node installation on Ubuntu
+ * You can install nodejs and npm easily with apt install, just run the following commands,
      $ sudo apt install nodejs
      $ sudo apt install npm
        
- ##### Installation on other operating systems
- You can find more information about the installation on the [official Node.js website] (https://nodejs.org) and the [official NPM website] (https://npmjs.org/).
+ ##### * Installation on other operating systems
+ * You can find more information about the installation on the [official Node.js website] (https://nodejs.org) and the [official NPM website] (https://npmjs.org/).
  
 If the installation was successful, you should be able to run the  following command.
     $ node --version
@@ -44,9 +44,9 @@ If the installation was successful, you should be able to run the  following com
     6.1.0
 
 ### Installation
-Fork the repository
-$ git clone https://github.com/<YOUR_USERNAME>/bookmarked-client
-cd bookmarked-client
-npm i
+* Fork the repository
+* $ git clone https://github.com/<YOUR_USERNAME>/bookmarked-client
+* cd bookmarked-client
+* npm i
 
   
