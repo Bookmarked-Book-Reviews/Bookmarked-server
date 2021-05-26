@@ -14,7 +14,6 @@ BHF/recG2KMH7gk4Clifo/2021
 
 ## Libraries used:
 * Express
-* Async
 * MongoDB Node js 
 * Body-Parser
 * Cors
@@ -45,8 +44,8 @@ If the installation was successful, you should be able to run the  following com
 
 ### Installation
 * Fork the repository
-* $ git clone https://github.com/<YOUR_USERNAME>/bookmarked-client
-* cd bookmarked-client
+* $ git clone https://github.com/<YOUR_USERNAME>/bookmarked-server
+* cd bookmarked-server
 * npm i
 
   
