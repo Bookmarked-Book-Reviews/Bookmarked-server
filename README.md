@@ -13,8 +13,8 @@ BHF/recG2KMH7gk4Clifo/2021
 
 
 ## Libraries used:
-Express\n
-Async\n
+Express
+Async
 MongoDB Node js 
 Body-Parser
 Cors
