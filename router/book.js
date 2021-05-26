@@ -23,13 +23,13 @@ app.get("/books",async(req,res)=>{
 
 
 app.post("/create",async(req,res)=>{
-   title = req.body.title;
-   isbn = req.body.isbn;
-   author = req.body.author;
-   language = req.body.language;
-   description = req.body.description;
-   year = req.body.year;
-   genre = req.body.genre;
+   const title = req.body.title;
+   const isbn = req.body.isbn;
+   const author = req.body.author;
+   const language = req.body.language;
+   const description = req.body.description;
+   const year = req.body.year;
+   const genre = req.body.genre;
 
    const Book = new bookSchema({title:title,isbn:isbn,author:author,language:language,description:description,year:year,genre:genre})
 	try{
