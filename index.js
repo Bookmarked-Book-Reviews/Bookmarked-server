@@ -16,6 +16,8 @@ const PORT = process.env.PORT || 5000;
 app.use(require('./router/auth'));
 app.use(require('./router/book'));
 
+
+const port = process.env.PORT || 5000
  app.get('/',(req, res) => {
     res.send('Hello world from the server index.js');
  });
