@@ -1,32 +1,44 @@
 const express = require('express');
 const router = express.Router();
-const bodyParser = require("body-parser");
 const app = express();
 
-
+app.use(express.json());
 
 
 require('../db/conn');
-const Book = require("../model/bookSchema");
+const bookSchema = require('../model/bookSchema');
 
 
 
-app.get("/books",function(req,res){
-	Book.find({},function(err,books){
+app.get("/books",async(req,res)=>{
+	bookSchema.find({},function(err,books){
 		if(err){
-			console.log("Error!");
+			console.log(`error ${req}`);
 		} else {
-			res.render("index",{books:books});
+			res.send(books);
 		}
 	});
 });
 
 
 
-app.post("/create",function(req,res){
+app.post("/create",async(req,res)=>{
+   title = req.body.title;
+   isbn = req.body.isbn;
+   author = req.body.author;
+   language = req.body.language;
+   description = req.body.description;
+   year = req.body.year;
+   genre = req.body.genre;
 
+   const Book = new bookSchema({title:title,isbn:isbn,author:author,language:language,description:description,year:year,genre:genre})
+	try{
+		await Book.save();
+		res.send("Book Added")
+	}catch(err){
+		console.log(err);
+	}
 	
-	console.log("book created");
 });
 
 

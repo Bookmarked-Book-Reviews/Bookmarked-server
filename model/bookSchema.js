@@ -4,12 +4,12 @@ const path = require('path')
 
 
 const bookSchema = new mongoose.Schema({
-    isbnNumber: {
+    title: {
         type: String,
         required: true,
         unique: true
     },
-    title: {
+    isbn: {
         type: String,
         required: true
     },
@@ -21,7 +21,11 @@ const bookSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    yearOfPublication: {
+    description: {
+        type: String,
+        required: true
+    },
+    year: {
         type:Number,
         required: true
     },
